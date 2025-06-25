@@ -23,7 +23,9 @@ export default function GenreChart({ range }: Props) {
     fetch(`/api/spotify/top-genres?range=${range}`)
       .then((res) => res.json())
       .then((data) => {
-        const sorted = data.sort((a: any, b: any) => b.count - a.count);
+        const sorted = data.sort(
+          (a: { count: number }, b: { count: number }) => b.count - a.count
+        );
         setGenres(sorted);
       });
   }, [range]);

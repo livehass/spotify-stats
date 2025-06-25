@@ -9,7 +9,15 @@ type Props = {
 };
 
 export default function ArtistList({ range }: Props) {
-  const [artists, setArtists] = useState<any[]>([]);
+  type Artist = {
+    id: string;
+    name: string;
+    images: { url: string }[];
+    external_urls: { spotify: string };
+    genres: string[];
+  };
+
+  const [artists, setArtists] = useState<Artist[]>([]);
 
   useEffect(() => {
     fetch(`/api/spotify/top-artists?range=${range}`)

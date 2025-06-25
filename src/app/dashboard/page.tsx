@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import TimeRangeSelector from "@/components/TimeRangeSelector";
 import TrackList from "@/components/TrackList";

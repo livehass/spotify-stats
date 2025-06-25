@@ -4,7 +4,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { buttonEntry, cardVariants, titleVariants } from "./utils/animations";
+import { cardVariants, titleVariants } from "./utils/animations";
 import { useTheme } from "./hooks/useTheme";
 import { Moon, Sun } from "lucide-react";
 

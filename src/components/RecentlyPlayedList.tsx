@@ -5,7 +5,20 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function RecentlyPlayedList() {
-  const [tracks, setTracks] = useState<any[]>([]);
+  interface TrackItem {
+    track: {
+      id: string;
+      name: string;
+      album: {
+        images: { url: string }[];
+      };
+      artists: { name: string }[];
+      external_urls: { spotify: string };
+    };
+    played_at: string;
+  }
+
+  const [tracks, setTracks] = useState<TrackItem[]>([]);
 
   useEffect(() => {
     fetch(`/api/spotify/recently-played`)

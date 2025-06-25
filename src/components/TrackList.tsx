@@ -9,7 +9,17 @@ type Props = {
 };
 
 export default function TrackList({ range }: Props) {
-  const [tracks, setTracks] = useState<any[]>([]);
+  type Track = {
+    id: string;
+    name: string;
+    album: {
+      images: { url: string }[];
+    };
+    artists: { name: string }[];
+    external_urls: { spotify: string };
+  };
+
+  const [tracks, setTracks] = useState<Track[]>([]);
 
   useEffect(() => {
     fetch(`/api/spotify/top-tracks?range=${range}`)

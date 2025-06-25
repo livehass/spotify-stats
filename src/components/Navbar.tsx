@@ -16,7 +16,6 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
 
   return (
