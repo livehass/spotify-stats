@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   }
 
   const res = await fetch(
-    `https://api.spotify.com/v1/me/player/recently-played?limit=20`,
+    `https://api.spotify.com/v1/me/player/recently-played?limit=30`,
     {
       headers: {
         Authorization: `Bearer ${token.accessToken}`,
