@@ -3,6 +3,7 @@
     "types": ["next-auth"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
