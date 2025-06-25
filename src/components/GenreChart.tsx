@@ -34,7 +34,7 @@ export default function GenreChart({ range }: Props) {
         variants={titleVariants.left}
         initial="hidden"
         animate="visible"
-        className="flex justify-center text-2xl mb-4"
+        className="flex justify-center text-2xl mb-4 dark:text-white text-black transition"
       >
         Top Genres
       </motion.h2>
